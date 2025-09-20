@@ -17,7 +17,7 @@ const HomePage: React.FC = () => {
     : { name: "You", streak: 5, trophies: 1200, rank: 12 };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-pastel-cream via-pastel-lavender to-pastel-sky text-gray-800">
       {/* Header */}
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-12">
