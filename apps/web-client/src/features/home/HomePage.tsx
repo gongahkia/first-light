@@ -21,32 +21,32 @@ const HomePage: React.FC = () => {
       {/* Header */}
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-12">
-          <h1 className="text-6xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+          <h1 className="text-6xl font-bold mb-4 bg-gradient-to-r from-soft-orange to-soft-pink bg-clip-text text-transparent">
             ⚡ FIRST LIGHT ⚡
           </h1>
-          <p className="text-2xl mb-2 text-blue-200">The Ultimate Wake-Up Arena</p>
-          <p className="text-lg text-gray-300">Compete. Conquer. Rise with the sun!</p>
+          <p className="text-2xl mb-2 text-soft-purple">The Ultimate Wake-Up Arena</p>
+          <p className="text-lg text-gray-600">Compete. Conquer. Rise with the sun!</p>
         </div>
 
         {/* User Stats Card */}
-        <div className="max-w-md mx-auto mb-12 bg-gradient-to-r from-purple-800 to-blue-800 rounded-2xl p-6 border-2 border-yellow-400 shadow-2xl">
+        <div className="max-w-md mx-auto mb-12 bg-gradient-to-r from-soft-purple to-soft-blue rounded-3xl p-6 border-2 border-soft-yellow shadow-pastel-lg">
           <div className="text-center">
             <div className="text-4xl mb-2">👑</div>
             <h2 className="text-2xl font-bold mb-4">
               {user ? `Welcome back, ${user.name}!` : "Join the Battle!"}
             </h2>
             <div className="grid grid-cols-3 gap-4 text-center">
-              <div className="bg-black/30 rounded-lg p-3">
-                <div className="text-yellow-400 text-xl font-bold">{currentUser.streak}</div>
-                <div className="text-sm">Day Streak</div>
+              <div className="bg-white/40 rounded-2xl p-3 shadow-pastel">
+                <div className="text-soft-orange text-xl font-bold">{currentUser.streak}</div>
+                <div className="text-sm text-gray-700">Day Streak</div>
               </div>
-              <div className="bg-black/30 rounded-lg p-3">
-                <div className="text-purple-400 text-xl font-bold">{currentUser.trophies}</div>
-                <div className="text-sm">Trophies</div>
+              <div className="bg-white/40 rounded-2xl p-3 shadow-pastel">
+                <div className="text-soft-purple text-xl font-bold">{currentUser.trophies}</div>
+                <div className="text-sm text-gray-700">Trophies</div>
               </div>
-              <div className="bg-black/30 rounded-lg p-3">
-                <div className="text-orange-400 text-xl font-bold">#{currentUser.rank}</div>
-                <div className="text-sm">Rank</div>
+              <div className="bg-white/40 rounded-2xl p-3 shadow-pastel">
+                <div className="text-soft-pink text-xl font-bold">#{currentUser.rank}</div>
+                <div className="text-sm text-gray-700">Rank</div>
               </div>
             </div>
           </div>
@@ -54,7 +54,7 @@ const HomePage: React.FC = () => {
 
         {/* Arena Leaderboard */}
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8 text-yellow-400">
+          <h2 className="text-3xl font-bold text-center mb-8 text-soft-orange">
             🏆 ARENA LEADERBOARD 🏆
           </h2>
 
@@ -62,14 +62,14 @@ const HomePage: React.FC = () => {
             {leaderboard.map((player) => (
               <div
                 key={player.rank}
-                className={`flex items-center justify-between p-4 rounded-xl transition-all hover:scale-105 ${
+                className={`flex items-center justify-between p-4 rounded-3xl transition-all hover:scale-105 shadow-pastel ${
                   player.rank === 1
-                    ? 'bg-gradient-to-r from-yellow-600 to-orange-600 border-2 border-yellow-400'
+                    ? 'bg-gradient-to-r from-pastel-yellow to-pastel-peach border-2 border-soft-yellow'
                     : player.rank === 2
-                    ? 'bg-gradient-to-r from-gray-500 to-gray-600 border-2 border-gray-400'
+                    ? 'bg-gradient-to-r from-pastel-sky to-pastel-periwinkle border-2 border-soft-blue'
                     : player.rank === 3
-                    ? 'bg-gradient-to-r from-orange-600 to-red-600 border-2 border-orange-400'
-                    : 'bg-gradient-to-r from-slate-700 to-slate-800 border border-slate-600'
+                    ? 'bg-gradient-to-r from-pastel-coral to-pastel-pink border-2 border-soft-pink'
+                    : 'bg-gradient-to-r from-pastel-sage to-pastel-mint border border-soft-green'
                 }`}
               >
                 <div className="flex items-center space-x-4">
@@ -81,8 +81,8 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="text-2xl font-bold text-yellow-400">{player.trophies}</div>
-                  <div className="text-sm opacity-75">trophies</div>
+                  <div className="text-2xl font-bold text-soft-orange">{player.trophies}</div>
+                  <div className="text-sm opacity-75 text-gray-600">trophies</div>
                 </div>
               </div>
             ))}
@@ -90,10 +90,10 @@ const HomePage: React.FC = () => {
 
           {/* Call to Action */}
           <div className="text-center mt-12">
-            <button className="bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-2xl text-xl transition-all transform hover:scale-105 shadow-lg border-2 border-red-400">
+            <button className="bg-gradient-to-r from-soft-pink to-soft-purple hover:from-pastel-pink hover:to-pastel-lavender text-white font-bold py-4 px-8 rounded-3xl text-xl transition-all transform hover:scale-105 shadow-pastel-lg border-2 border-soft-pink">
               ⚔️ ENTER THE ARENA ⚔️
             </button>
-            <p className="mt-4 text-gray-300">
+            <p className="mt-4 text-gray-600">
               Join a group and start your wake-up conquest!
             </p>
           </div>
@@ -101,20 +101,20 @@ const HomePage: React.FC = () => {
 
         {/* Features Grid */}
         <div className="grid md:grid-cols-3 gap-6 mt-16 max-w-6xl mx-auto">
-          <div className="bg-black/30 rounded-xl p-6 border border-blue-500">
+          <div className="bg-white/50 rounded-3xl p-6 border border-soft-blue shadow-pastel">
             <div className="text-4xl mb-4 text-center">⏰</div>
-            <h3 className="text-xl font-bold mb-2 text-blue-400">Daily Battles</h3>
-            <p className="text-gray-300">Set your wake-up time and prove you can beat the sunrise!</p>
+            <h3 className="text-xl font-bold mb-2 text-soft-blue">Daily Battles</h3>
+            <p className="text-gray-600">Set your wake-up time and prove you can beat the sunrise!</p>
           </div>
-          <div className="bg-black/30 rounded-xl p-6 border border-purple-500">
+          <div className="bg-white/50 rounded-3xl p-6 border border-soft-purple shadow-pastel">
             <div className="text-4xl mb-4 text-center">🏆</div>
-            <h3 className="text-xl font-bold mb-2 text-purple-400">Trophy System</h3>
-            <p className="text-gray-300">Earn trophies for consistency and climb the ranks!</p>
+            <h3 className="text-xl font-bold mb-2 text-soft-purple">Trophy System</h3>
+            <p className="text-gray-600">Earn trophies for consistency and climb the ranks!</p>
           </div>
-          <div className="bg-black/30 rounded-xl p-6 border border-green-500">
+          <div className="bg-white/50 rounded-3xl p-6 border border-soft-green shadow-pastel">
             <div className="text-4xl mb-4 text-center">👥</div>
-            <h3 className="text-xl font-bold mb-2 text-green-400">Group Warfare</h3>
-            <p className="text-gray-300">Team up with friends and dominate together!</p>
+            <h3 className="text-xl font-bold mb-2 text-soft-green">Group Warfare</h3>
+            <p className="text-gray-600">Team up with friends and dominate together!</p>
           </div>
         </div>
       </div>

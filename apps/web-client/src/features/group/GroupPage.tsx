@@ -26,51 +26,51 @@ const GroupPage: React.FC = () => {
   const isToday = true; // Mock check-in status
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-pastel-cream via-pastel-lavender to-pastel-sky text-gray-800">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-soft-blue to-soft-purple bg-clip-text text-transparent">
             ⚔️ {group.name} ⚔️
           </h1>
-          <p className="text-lg text-gray-300">{group.season}</p>
+          <p className="text-lg text-gray-600">{group.season}</p>
           <div className="flex justify-center items-center gap-6 mt-4 text-sm">
-            <span className="bg-blue-800 px-3 py-1 rounded-full">👥 {group.members} Warriors</span>
-            <span className="bg-purple-800 px-3 py-1 rounded-full">⏰ Target: {group.targetTime}</span>
+            <span className="bg-soft-blue text-white px-3 py-1 rounded-full shadow-pastel">👥 {group.members} Warriors</span>
+            <span className="bg-soft-purple text-white px-3 py-1 rounded-full shadow-pastel">⏰ Target: {group.targetTime}</span>
           </div>
         </div>
 
         {/* Check-in Section */}
         <div className="max-w-2xl mx-auto mb-12">
-          <div className="bg-gradient-to-r from-green-800 to-blue-800 rounded-2xl p-6 border-2 border-green-400 shadow-2xl">
+          <div className="bg-gradient-to-r from-soft-green to-soft-blue rounded-3xl p-6 border-2 border-soft-green shadow-pastel-lg">
             <h2 className="text-2xl font-bold text-center mb-6">Today's Battle Status</h2>
 
             {!isToday ? (
               <div className="text-center">
                 <div className="text-6xl mb-4">⏰</div>
                 <h3 className="text-xl font-bold mb-4">Ready for Battle?</h3>
-                <button className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-bold py-3 px-8 rounded-xl text-lg transition-all transform hover:scale-105">
+                <button className="bg-gradient-to-r from-soft-green to-soft-blue hover:from-pastel-mint hover:to-pastel-sky text-white font-bold py-3 px-8 rounded-2xl text-lg transition-all transform hover:scale-105 shadow-pastel">
                   🚀 CHECK IN NOW!
                 </button>
-                <p className="mt-4 text-gray-300">Prove you conquered the morning!</p>
+                <p className="mt-4 text-gray-600">Prove you conquered the morning!</p>
               </div>
             ) : (
               <div className="text-center">
                 <div className="text-6xl mb-4">🏆</div>
-                <h3 className="text-xl font-bold mb-2 text-green-400">Victory Achieved!</h3>
-                <p className="text-gray-300 mb-4">Checked in at 5:55 AM (+5 early bonus!)</p>
+                <h3 className="text-xl font-bold mb-2 text-soft-green">Victory Achieved!</h3>
+                <p className="text-gray-600 mb-4">Checked in at 5:55 AM (+5 early bonus!)</p>
                 <div className="grid grid-cols-3 gap-4">
-                  <div className="bg-black/30 rounded-lg p-3">
-                    <div className="text-yellow-400 text-xl font-bold">+50</div>
-                    <div className="text-sm">Points</div>
+                  <div className="bg-white/40 rounded-2xl p-3 shadow-pastel">
+                    <div className="text-soft-yellow text-xl font-bold">+50</div>
+                    <div className="text-sm text-gray-700">Points</div>
                   </div>
-                  <div className="bg-black/30 rounded-lg p-3">
-                    <div className="text-green-400 text-xl font-bold">16</div>
-                    <div className="text-sm">Streak</div>
+                  <div className="bg-white/40 rounded-2xl p-3 shadow-pastel">
+                    <div className="text-soft-green text-xl font-bold">16</div>
+                    <div className="text-sm text-gray-700">Streak</div>
                   </div>
-                  <div className="bg-black/30 rounded-lg p-3">
-                    <div className="text-purple-400 text-xl font-bold">+5</div>
-                    <div className="text-sm">Bonus</div>
+                  <div className="bg-white/40 rounded-2xl p-3 shadow-pastel">
+                    <div className="text-soft-purple text-xl font-bold">+5</div>
+                    <div className="text-sm text-gray-700">Bonus</div>
                   </div>
                 </div>
               </div>
@@ -80,7 +80,7 @@ const GroupPage: React.FC = () => {
 
         {/* Group Leaderboard */}
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8 text-yellow-400">
+          <h2 className="text-3xl font-bold text-center mb-8 text-soft-orange">
             👑 GROUP RANKINGS 👑
           </h2>
 
@@ -88,14 +88,14 @@ const GroupPage: React.FC = () => {
             {groupLeaderboard.map((member) => (
               <div
                 key={member.rank}
-                className={`flex items-center justify-between p-4 rounded-xl transition-all hover:scale-105 ${
+                className={`flex items-center justify-between p-4 rounded-3xl transition-all hover:scale-105 shadow-pastel ${
                   member.rank === 1
-                    ? 'bg-gradient-to-r from-yellow-700 to-orange-700 border-2 border-yellow-400'
+                    ? 'bg-gradient-to-r from-pastel-yellow to-pastel-peach border-2 border-soft-yellow'
                     : member.status === '✅'
-                    ? 'bg-gradient-to-r from-green-700 to-emerald-700 border border-green-500'
+                    ? 'bg-gradient-to-r from-pastel-mint to-pastel-sage border border-soft-green'
                     : member.status === '⏰'
-                    ? 'bg-gradient-to-r from-orange-700 to-red-700 border border-orange-500'
-                    : 'bg-gradient-to-r from-gray-700 to-slate-700 border border-gray-600'
+                    ? 'bg-gradient-to-r from-pastel-coral to-pastel-pink border border-soft-orange'
+                    : 'bg-gradient-to-r from-pastel-periwinkle to-pastel-lavender border border-soft-purple'
                 }`}
               >
                 <div className="flex items-center space-x-4">
@@ -109,31 +109,31 @@ const GroupPage: React.FC = () => {
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="text-2xl font-bold text-yellow-400">{member.weeklyScore}</div>
-                  <div className="text-sm opacity-75">weekly pts</div>
+                  <div className="text-2xl font-bold text-soft-orange">{member.weeklyScore}</div>
+                  <div className="text-sm opacity-75 text-gray-600">weekly pts</div>
                 </div>
               </div>
             ))}
           </div>
 
           {/* Weekly Challenge */}
-          <div className="mt-12 bg-black/30 rounded-2xl p-6 border border-purple-500">
-            <h3 className="text-2xl font-bold text-center mb-6 text-purple-400">📅 Weekly Challenge</h3>
+          <div className="mt-12 bg-white/50 rounded-3xl p-6 border border-soft-purple shadow-pastel">
+            <h3 className="text-2xl font-bold text-center mb-6 text-soft-purple">📅 Weekly Challenge</h3>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="text-center">
                 <div className="text-3xl mb-2">🎯</div>
                 <h4 className="font-bold mb-2">Perfect Week</h4>
-                <p className="text-gray-300">7 consecutive check-ins before 6:00 AM</p>
-                <div className="mt-4 bg-purple-800 rounded-full h-4">
-                  <div className="bg-gradient-to-r from-yellow-400 to-orange-400 h-4 rounded-full" style={{width: '71%'}}></div>
+                <p className="text-gray-600">7 consecutive check-ins before 6:00 AM</p>
+                <div className="mt-4 bg-pastel-lavender rounded-full h-4">
+                  <div className="bg-gradient-to-r from-soft-yellow to-soft-orange h-4 rounded-full" style={{width: '71%'}}></div>
                 </div>
                 <p className="text-sm mt-2">5/7 days completed</p>
               </div>
               <div className="text-center">
                 <div className="text-3xl mb-2">🏅</div>
                 <h4 className="font-bold mb-2">Group Bonus</h4>
-                <p className="text-gray-300">All members check in for +20 bonus points</p>
-                <div className="text-2xl font-bold text-yellow-400 mt-2">83%</div>
+                <p className="text-gray-600">All members check in for +20 bonus points</p>
+                <div className="text-2xl font-bold text-soft-orange mt-2">83%</div>
                 <p className="text-sm">group completion</p>
               </div>
             </div>
@@ -141,13 +141,13 @@ const GroupPage: React.FC = () => {
 
           {/* Battle Tips */}
           <div className="mt-8 grid md:grid-cols-2 gap-6">
-            <div className="bg-blue-900/50 rounded-xl p-4 border border-blue-500">
-              <h4 className="font-bold mb-2 text-blue-400">💡 Pro Tip</h4>
-              <p className="text-sm text-gray-300">Check in 5+ minutes early for bonus points!</p>
+            <div className="bg-pastel-sky rounded-2xl p-4 border border-soft-blue shadow-pastel">
+              <h4 className="font-bold mb-2 text-soft-blue">💡 Pro Tip</h4>
+              <p className="text-sm text-gray-600">Check in 5+ minutes early for bonus points!</p>
             </div>
-            <div className="bg-green-900/50 rounded-xl p-4 border border-green-500">
-              <h4 className="font-bold mb-2 text-green-400">🔥 Streak Bonus</h4>
-              <p className="text-sm text-gray-300">10+ day streaks earn double weekend points!</p>
+            <div className="bg-pastel-mint rounded-2xl p-4 border border-soft-green shadow-pastel">
+              <h4 className="font-bold mb-2 text-soft-green">🔥 Streak Bonus</h4>
+              <p className="text-sm text-gray-600">10+ day streaks earn double weekend points!</p>
             </div>
           </div>
         </div>
