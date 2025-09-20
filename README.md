@@ -16,8 +16,12 @@
 
 * *Frontend*: [React](https://react.dev/), [Electron.js](https://www.electronjs.org/), [Vite](https://vite.dev/), [TypeScript](https://www.typescriptlang.org/)
 * *Backend*: [Node.js](https://nodejs.org/en)
-* *DB*: [PostgreSQL](https://www.postgresql.org/)
+* *DB*: [PostgreSQL](https://www.postgresql.org/), [Prisma](https://www.prisma.io/)
 * *Package*: [Docker](https://www.docker.com/)
+
+## Screenshot
+
+![]()
 
 ## Usage
 
