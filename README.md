@@ -2,28 +2,24 @@
 
 # `First Light`
 
-...
+*"Just 5 more minutes"*.
 
 ## Rationale
 
-...
+`First Light` transforms the guilt-ridden exercise of waking up late into a competitive sport. Because sleeping through the 50 alarms you set shouldn't be the norm.
+
+<div align="center">
+    <img src="./asset/logo/alarm.webp" width="35%">
+</div>
 
 ## Stack
 
-* *Frontend*: React, Electron.js, Vite, TypeScript
-* *Backend*: Node.js
-* *DB*: PostgreSQL 
-* *Deployment*: Docker 
+* *Frontend*: [React](https://react.dev/), [Electron.js](https://www.electronjs.org/), [Vite](https://vite.dev/), [TypeScript](https://www.typescriptlang.org/)
+* *Backend*: [Node.js](https://nodejs.org/en)
+* *DB*: [PostgreSQL](https://www.postgresql.org/), [Prisma](https://www.prisma.io/)
+* *Package*: [Docker](https://www.docker.com/)
 
-## Screenshots
-
-...
-
-![]()
-
-![]()
-
-![]()
+## Screenshot
 
 ![]()
 
@@ -217,15 +213,20 @@ C4Container
 
 ## Support
 
-...
+| Platform | Status | Version |
+|----------|--------|----------|
+| Web (Chrome) | ✅ Supported | Latest |
+| Web (Firefox) | ✅ Supported | Latest |
+| Web (Safari) | ✅ Supported | Latest |
+| Web (Edge) | ✅ Supported | Latest |
+| Desktop (Windows) | ✅ Supported | Electron |
+| Desktop (macOS) | ✅ Supported | Electron |
+| Desktop (Linux) | ✅ Supported | Electron |
+| Mobile (iOS) | ❌ Not yet | Future |
+| Mobile (Android) | ❌ Not yet | Future |
+
+For support, please [open an issue](https://github.com/gongahkia/first-light/issues) on GitHub.
 
 ## Legal
 
-**Disclaimer:** This project is provided "as is" without warranty of any kind. The information provided in this README, including any architectural diagrams or usage instructions, is for informational purposes only.
-
-**Important Note on Legal Disclosure (Singapore Law):**
-Generating a comprehensive and legally compliant disclosure under Singapore law requires specialized legal expertise. As an AI, I am not qualified to provide legal advice or create legal documents.
-
-**It is strongly recommended that you consult with a qualified legal professional in Singapore to draft an appropriate and legally sound disclosure for your project, covering aspects such as data protection (PDPA), intellectual property, terms of service, privacy policy, and any other relevant legal considerations.**
-
-This section is a placeholder and should be replaced with proper legal documentation.
+**Disclaimer:** First Light is provided "as is" without warranty of any kind, express or implied. This accountability and check-in application is designed for personal and team productivity purposes. Users are responsible for their own data and usage of the application.
