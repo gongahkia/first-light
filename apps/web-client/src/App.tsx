@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './features/home/HomePage';
 import GroupPage from './features/group/GroupPage';
