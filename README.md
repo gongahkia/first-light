@@ -1,51 +1,5 @@
 [![](https://img.shields.io/badge/first_light_1.0.0-passing-green)](https://github.com/gongahkia/first-light/releases/tag/1.0.0) 
 
-## Development Setup
-
-### Prerequisites
-- Node.js 20+
-- Docker & Docker Compose
-- PostgreSQL (for local development)
-
-### Environment Configuration
-
-Create a `.env` file in the `apps/api-server` directory:
-
-```env
-DATABASE_URL="postgresql://USER:PASSWORD@localhost:5432/firstlight"
-PORT=4000
-```
-
-### Quick Start
-
-```bash
-# Install all dependencies
-npm run install:all
-
-# Build all applications
-npm run build
-
-# Development mode
-npm run dev:api    # Start API server
-npm run dev:web    # Start React frontend
-npm run dev:electron  # Start Electron app
-
-# Docker deployment
-npm run docker:build  # Build containers
-npm run docker:up     # Start all services
-npm run docker:down   # Stop all services
-```
-
-### Project Structure
-
-- `apps/api-server` - Node.js/Express API with Prisma ORM
-- `apps/web-client` - React frontend with Vite and TailwindCSS
-- `apps/electron-app` - Electron desktop application
-- `packages/shared-types` - Shared TypeScript type definitions
-- `packages/ui-components` - Reusable UI components
-- `packages/utils` - Shared utility functions
-- `docker/` - Docker Compose configuration
-
 # `First Light`
 
 ...
@@ -56,28 +10,63 @@ npm run docker:down   # Stop all services
 
 ## Stack
 
-...
+* *Frontend*: React, Electron.js, Vite, TypeScript
+* *Backend*: Node.js
+* *DB*: PostgreSQL 
+* *Deployment*: Docker 
 
 ## Screenshots
 
 ...
 
+![]()
+
+![]()
+
+![]()
+
+![]()
+
 ## Usage
 
-...
+The below instructions are for locally hosting `First Light`.
+
+1. First execute the below.
+
+```console
+$ git clone https://github.com/gongahkia/first-light && cd first-light
+$ npm run install:all && npm run build
+```
+
+2. Then create a `.env` file at [`apps/api-server`](./apps/api-server/).
+
+```env
+DATABASE_URL="postgresql://USER:PASSWORD@localhost:5432/firstlight"
+PORT=4000
+```
+
+3. Finally run any of the below.
+
+```console
+$ npm run dev:api # Start API server
+$ npm run dev:web # Start React frontend
+$ npm run dev:electron # Start Electron app
+
+$ npm run docker:build # Run via Docker
+$ npm run docker:up # Spin up
+$ npm run docker:down # Wind down
+```
+
+## Architecture
+
+```mermaid
+
+```
 
 ## Support
 
 ...
 
-## Architecture
-
-...
-
 ## Legal
-
-...
-
-## Reference
 
 ...
